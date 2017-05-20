@@ -23,9 +23,10 @@ import vuePaginator from 'vuejs-beauty-paginator'
 ```js
 <template>
   <pagination
+    :per-page="perPages" // 分页标签中可见的页码数，其他以...代替, 必须是奇数
     :page-index="currentPage" // 当前页数
     :total="count" // 总页数
-    :page-size="pageSize" // 分页标签中可见的页码数，其他以...代替, 必须是奇数
+    :page-size="pageSize" // 每页显示数据的数量
     @change="pageChange"> // 当点击组件跳页时，子组件中通过调用change方法给父组件传递点击的页码，父组件通过调用pageChange方法来请求新数据
   </pagination>
 </template>
@@ -34,12 +35,14 @@ import vuePaginator from 'vuejs-beauty-paginator'
 export default {
   data () {
       return {
+      // 分页标签中可见的页码数，其他以...代替, 必须是奇数
+      perPages：4
       // 每页显示条数
-      pageSize: 4,
+      pageSize: 10,
       // 当前页码
       currentPage: 1,
-      // 总记录数
-      count: 0
+      // 总记录数，需要请求此数据，并赋值
+      count: 0
     }
   },
   methods: {
@@ -56,3 +59,13 @@ export default {
 }
 </script>
 ```
+
+## prop
+| Name          | Type     | Default | Required | Description
+| :------------ | :--------| :-------| :--------| :-----------
+| perPages      | Number   | 5       | true     | 分页标签中可见的页码数，其他以...代替, 必须是奇数
+| pageIndex     | Number   | 1       | true     | 当前页码
+| pageSize      | Number   | 1       | true     | 每页显示条数
+| total         | Number   | 1       | true     | 总记录数
+
+
