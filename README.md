@@ -63,7 +63,7 @@ export default {
 ### prop
 | Name          | Type     | Default | Required | Description
 | :------------ | :--------| :-------| :--------| :-----------
-| perPages      | Number   | 5       | true     | 分页标签中可见的页码数，其他以...代替, 必须是奇数
+| perPages      | Number   | 5       | false    | 分页标签中可见的页码数，其他以...代替, 必须是奇数
 | pageIndex     | Number   | 1       | true     | 当前页码
 | pageSize      | Number   | 1       | true     | 每页显示条数
 | total         | Number   | 1       | true     | 总记录数
