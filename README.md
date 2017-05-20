@@ -3,4 +3,4 @@
 
 vue-beauty-paginator是一个简单但功能强大的插件，它可以描绘出漂亮的分页标签。
 
-![img](https://github.com/qwbtc/vue-beauty-paginator/dist/dist/image/show.gif)
+![](https://github.com/qwbtc/vue-beauty-paginator/blob/master/dist/dist/image/show.gif)
