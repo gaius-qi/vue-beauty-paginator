@@ -1,3 +1,4 @@
+var webpack = require("webpack")
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -45,3 +46,12 @@ module.exports = {
     },
     watch: true
 }
+
+module.exports.plugins = [
+  new webpack.optimize.UglifyJsPlugin({
+    minimize: true,
+    compress: {
+      warnings: false,
+    },
+  })
+]
