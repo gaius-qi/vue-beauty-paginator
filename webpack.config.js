@@ -23,11 +23,11 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: 'style!css!autoprefixer'
+                loader: 'style!css'
             },
             {
-                test: /\.less$/,
-                loader: 'style!css!less!autoprefixer'
+              test: /\.styl$/,
+              loader: 'style-loader!css-loader!stylus-loader'
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -38,11 +38,6 @@ module.exports = {
                 }
             }
         ]
-    },
-    vue: {
-        postcss: [
-            require('autoprefixer')()
-        ],
     },
     watch: true
 }

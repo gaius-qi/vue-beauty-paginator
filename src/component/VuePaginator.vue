@@ -13,7 +13,7 @@
 
 </template>
 
-<script type="text/ecmascript-6">
+<script>
 export default {
   name: 'Pagination',
   props: {
@@ -120,6 +120,54 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@import "../style/main.less";
+<style lang="stylus" scoped>
+@font-face
+  font-family 'SentyZHAO'
+  src url('../fonts/SentyZHAO.ttf') format('truetype')
+
+.pager
+  display inline-block
+  padding 0
+  margin 1rem 0
+  font-size 0
+  list-style none
+  user-select none
+  font-family 'SentyZHAO'
+  > .pager-btn
+    display inline
+    font-size 1.2rem
+    position relative
+    padding 6px 12px
+    line-height 1.2rem
+    text-decoration none
+    border 0.1rem solid #2c3e50
+    margin-left -1px
+    margin-right 0.5rem
+    cursor pointer
+    color #2c3e50
+    border-radius 1rem
+    transition all 0.5s ease-out
+    &:first-child
+      margin-left 0
+    &:hover
+      background-color #2c3e50
+      border 0.1rem solid #2c3e50
+      color #fff
+    &.pager-btn--disabled
+      background-color #2c3e50
+      color #fff
+      cursor not-allowed
+      opacity .6
+    &.pager-btn--more,
+    &.pager-btn--current
+      cursor default
+    &.pager-btn--current
+      background-color #2c3e50
+      color #fff
+      position relative
+      z-index 1
+      border-color #2c3e50
+    &.pager-btn--more:hover
+      background-color rgba(0, 0, 0, 0)
+      color #2c3e50
 </style>
