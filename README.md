@@ -5,20 +5,20 @@ vue-beauty-paginator是一个简单但功能强大的插件，它可以描绘出
 
 ![vue brauty paginator preview](https://github.com/qwbtc/vue-beauty-paginator/blob/master/dist/dist/image/show.gif).
 
-## 安装
+### 安装
 > Vue 2.0以上
-### npm
+#### npm
 ``` bash
 npm install vuejs-beauty-paginator --save
 ```
 
-## 用法
+### 用法
 作为组件引用
 ```js
 import vuePaginator from 'vuejs-beauty-paginator'
 ```
 
-## 示例
+### 示例
 在父组件example.vue中
 ```js
 <template>
@@ -60,7 +60,7 @@ export default {
 </script>
 ```
 
-## prop
+### prop
 | Name          | Type     | Default | Required | Description
 | :------------ | :--------| :-------| :--------| :-----------
 | perPages      | Number   | 5       | true     | 分页标签中可见的页码数，其他以...代替, 必须是奇数
@@ -68,4 +68,14 @@ export default {
 | pageSize      | Number   | 1       | true     | 每页显示条数
 | total         | Number   | 1       | true     | 总记录数
 
+### 开发环境设置
+``` bash
+# 安装依赖
+npm install
 
+# 生成源文件
+npm run build
+```
+
+### License
+[MIT](http://opensource.org/licenses/MIT)
