@@ -23,15 +23,18 @@ export default {
     },
     pageIndex: {
       type: Number,
-      default: 1
+      default: 1,
+      required: true
     },
     pageSize: {
       type: Number,
-      default: 10
+      default: 1,
+      required: true
     },
     total: {
       type: Number,
-      default: 1
+      default: 1,
+      required: true
     }
   },
   methods: {
