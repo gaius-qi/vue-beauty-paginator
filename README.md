@@ -3,7 +3,7 @@
 
 vue-beauty-paginator是一个简单但功能强大的插件，它可以描绘出漂亮的分页标签。
 
-![vue brauty paginator preview](https://github.com/qwbtc/vue-beauty-paginator/blob/master/dist/dist/image/show.gif).
+![vue brauty paginator preview](https://github.com/qwbtc/vue-beauty-paginator/blob/master/src/image/show.gif).
 
 ### 安装
 > Vue.js 1.0.0+
