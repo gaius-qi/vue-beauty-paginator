@@ -34,26 +34,26 @@ import vuePaginator from 'vuejs-beauty-paginator'
 import vuePaginator from 'vuejs-beauty-paginator'
 export default {
   data () {
-      return {
+    return {
       // 分页标签中可见的页码数，其他以...代替, 必须是奇数
       perPages：4
       // 每页显示条数
       pageSize: 10,
       // 当前页码
       currentPage: 1,
-      // 总记录数，需要请求此数据，并赋值
-      count: 0
+      // 总记录数，需要请求此数据，并赋值
+      count: 0
     }
   },
   methods: {
-      ...mapActions([
-        'getPagesInfo'
-      ]),
-      // 跳页时请求数据
-      pageChange (page) {
+    ...mapActions([
+      'getPagesInfo'
+    ]),
+    // 跳页时请求数据
+    pageChange (page) {
       this.currentPage = page
-      //后台请求该页数据
-      this.getPagesInfo(this.currentPage)
+      //后台请求该页数据
+      this.getPagesInfo(this.currentPage)
     }
   }
 }
@@ -61,12 +61,12 @@ export default {
 ```
 
 ### prop
-| Name          | Type     | Default | Required | Description
-| :------------ | :--------| :-------| :--------| :-----------
-| perPages      | Number   | 5       | false    | 分页标签中可见的页码数，其他以...代替, 必须是奇数
-| pageIndex     | Number   | 1       | true     | 当前页码
-| pageSize      | Number   | 1       | true     | 每页显示条数
-| total         | Number   | 1       | true     | 总记录数
+| Name          | Type     | Default | Required | Description |
+| ------------ | --------| -------| --------| ----------- |
+| perPages      | Number   | 5       | false    | 分页标签中可见的页码数，其他以...代替, 必须是奇数 |
+| pageIndex     | Number   | 1       | true     | 当前页码 |
+| pageSize      | Number   | 1       | true     | 每页显示条数 |
+| total         | Number   | 1       | true     | 总记录数 |
 
 ### 开发环境设置
 ``` bash
